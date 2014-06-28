@@ -1,0 +1,44 @@
+{
+  "name": "glslify-bundle",
+  "version": "1.0.0",
+  "description": "A wrapper module for bundling glslify scripts using common functionality within the glslify module ecosystem",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "node test"
+  },
+  "author": {
+    "name": "Hugh Kennedy",
+    "email": "hughskennedy@gmail.com",
+    "url": "http://hughsk.io/"
+  },
+  "dependencies": {
+    "concat-stream": "^1.4.6",
+    "glsl-deparser": "0.0.3",
+    "glslify-stream": "^0.4.1",
+    "new-from": "0.0.3",
+    "once": "^1.3.0",
+    "resolve": "^0.7.1"
+  },
+  "devDependencies": {
+    "glslify-hex": "0.0.0",
+    "tape": "^2.13.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hughsk/glslify-bundle.git"
+  },
+  "keywords": [
+    "glslify",
+    "glsl",
+    "webgl",
+    "shader",
+    "bundle",
+    "dependency",
+    "tool"
+  ],
+  "homepage": "https://github.com/hughsk/glslify-bundle",
+  "bugs": {
+    "url": "https://github.com/hughsk/glslify-bundle/issues"
+  }
+}
