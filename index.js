@@ -52,7 +52,9 @@ function bundle(cwd, options, done) {
     }
   }
 
-  handle(frag, vert && glslify(vertname, opts), 'vert')
+  vertname = path.resolve(vertname)
+  fragname = path.resolve(fragname)
+  handle(vert, vert && glslify(vertname, opts), 'vert')
   handle(frag, frag && glslify(fragname, opts), 'frag')
 
   function handle(inputStream, outputStream, key) {
