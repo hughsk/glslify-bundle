@@ -1,6 +1,7 @@
 var glslify  = require('glslify-stream')
 var deparser = require('glsl-deparser')
 var concat   = require('concat-stream')
+var combine  = require('multipipe')
 var from     = require('new-from')
 var resolve  = require('resolve')
 var path     = require('path')
@@ -62,13 +63,13 @@ function bundle(cwd, options, done) {
       return check(result[key] = ' ')
     }
 
-    outputStream.on('file', pushFile)
-      .once('error', done)
-      .pipe(deparser())
-      .once('error', done)
-      .pipe(concat(function(data) {
+    combine(
+        outputStream.on('file', pushFile)
+      , deparser()
+      , concat(function(data) {
         check(result[key] = data)
-      }))
+      })
+    ).on('error', done)
 
     if (inputStream) {
       inputStream.pipe(outputStream)
