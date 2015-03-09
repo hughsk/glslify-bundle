@@ -1,4 +1,7 @@
-# glslify-bundle [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
+# glslify-bundle [![deprecated](http://badges.github.io/stability-badges/dist/deprecated.svg)](http://github.com/badges/stability-badges)
+
+**Deprecated**. See [stackgl/glslify-bundle](http://github.com/stackgl/glslify-bundle)
+instead.
 
 A wrapper module for bundling glslify scripts using common functionality within
 the glslify module ecosystem.
