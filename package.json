@@ -1,6 +1,6 @@
 {
   "name": "glslify-bundle",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A wrapper module for bundling glslify scripts using common functionality within the glslify module ecosystem",
   "main": "index.js",
   "license": "MIT",
