@@ -37,7 +37,7 @@ function bundle(cwd, options, done) {
     if (!inline) {
       vertname = vert
       vert = resolve.sync(vert, { basedir: cwd })
-      vert = fs.createReadStream(vert, 'utf8')
+      vert = fs.createReadStream(vert, { encoding: 'utf8' })
     } else {
       vert = from([vert])
     }
@@ -47,7 +47,7 @@ function bundle(cwd, options, done) {
     if (!inline) {
       fragname = frag
       frag = resolve.sync(frag, { basedir: cwd })
-      frag = fs.createReadStream(frag, 'utf8')
+      frag = fs.createReadStream(frag, { encoding: 'utf8' })
     } else {
       frag = from([frag])
     }
